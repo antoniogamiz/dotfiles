@@ -146,3 +146,10 @@ eval "$(pyenv init -)"
 export PATH=$PATH:/home/antonio/.local/bin
 
 if [ -z $TMUX ]; then; tmux; fi
+
+
+function reload_audio() {
+  # Source: https://superuser.com/questions/17312/restart-ubuntu-sound-processes-via-command-line
+  pulseaudio -k
+  sudo alsa force-reload
+}
