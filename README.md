@@ -7,12 +7,39 @@ diff
 
 ## Multiple accounts Git/GitHub
 
-Just install the github and:
+Install the github and:
 
 ```bash
 git auth login # with one account
 git auth login # with another account
 git auth switch # to change between them
+```
+
+Add this to the `~/.ssh/config` file:
+
+```
+# GitHub personal
+Host personal
+HostName github.com
+AddKeysToAgent yes
+UseKeyChain yes
+IdentityFile ~/.ssh/personal
+IdentitiesOnly yes
+
+# GitHub work
+Host work
+HostName github.com
+AddKeysToAgent yes
+UseKeyChain yes
+IdentityFile ~/.ssh/id_ed25519
+IdentitiesOnly yes
+```
+
+Then, when you clone a repository, make sure you modify the `origin` accordingly:
+
+```
+git remote remove origin
+git remote add origin git@<personal|work>:<owner>/<repository>.git
 ```
 
 ## Stow
