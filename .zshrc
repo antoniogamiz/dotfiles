@@ -144,6 +144,19 @@ function reload_audio() {
   sudo alsa force-reload
 }
 
+function personal_github_account() {
+	git config --global user.name "antoniogamiz"
+	git config --global user.email "antoniogamiz10@gmail.com"
+    ssh-add -D && ssh-add ~/.ssh/personal_user
+}
+
+
+function work_github_account() {
+    git config --global user.name "antoniogamizbadger"
+    git config --global user.email "antonio.gamiz@badgermapping.com"
+    ssh-add -D && ssh-add ~/.ssh/id_ed25519
+}
+
 alias ls=colorls
 alias python=python3
 alias n=nvim
