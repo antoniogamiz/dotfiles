@@ -113,7 +113,15 @@ source $ZSH/oh-my-zsh.sh
 #
 
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+if [[ $(uname) == "Darwin" ]]; then
+    export PATH=$PATH:/Users/antoniogamizdelgado/.local/bin
+	source /Users/antoniogamizdelgado/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+else
+	# ubuntu
+	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    export PATH=$PATH:/home/antonio/.local/bin
+	source /home/antonio/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -121,15 +129,11 @@ export NVM_DIR="$HOME/.nvm"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source /home/antonio/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-export PATH=$PATH:/home/antonio/.local/bin
 
 if [ -z $TMUX ]; then; tmux; fi
 
