@@ -49,4 +49,5 @@ You can check `.stow-local-ignore`.
 
 ```bash
 sudo apt-get install stow
+brew install stow # macos
 ```
