@@ -54,6 +54,14 @@ sudo apt-get install stow
 brew install stow # macos
 ```
 
+### ripgrep
+
+This is needed to support search in neovim.
+
+```bash
+brew install ripgrep
+```
+
 ### fd
 
 ```bash
