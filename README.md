@@ -72,6 +72,14 @@ brew install pyenv
 brew install tmux
 ```
 
+We also need to install the [tmux plugin manager](https://github.com/tmux-plugins/tpm):
+
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+Remember to press `<leader>I` (the leader key in my configuration is `<C-s>`) to install the tmux plugins.
+
 ### Neovim
 
 ```bash
