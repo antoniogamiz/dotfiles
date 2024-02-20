@@ -160,3 +160,6 @@ function work_github_account() {
 alias ls=colorls
 alias python=python3
 alias n=nvim
+
+eval "$(zoxide init zsh)"
+
