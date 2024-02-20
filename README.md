@@ -44,7 +44,6 @@ git remote add origin git@<personal|work>:<owner>/<repository>.git
 
 ## Dependencies
 
-
 ### [Zoxide (smarter cd)](https://github.com/ajeetdsouza/zoxide)
 
 ```bash
@@ -53,7 +52,7 @@ brew install zoxide
 
 ### [Lazy git](https://github.com/jesseduffield/lazygit?tab=readme-ov-file#homebrew)
 
-```bash 
+```bash
 brew install lazygit
 ```
 
@@ -104,7 +103,7 @@ Remember to press `<leader>I` (the leader key in my configuration is `<C-s>`) to
 ### Neovim
 
 ```bash
-brew insatll neovim
+brew install neovim
 ```
 
 ### Colorls
