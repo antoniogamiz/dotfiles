@@ -4,6 +4,8 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
 vim.cmd("set clipboard=unnamedplus")
+vim.cmd('nnoremap d "_d')
+vim.cmd('vnoremap d "_d')
 vim.g.mapleader = " "
 
 -- move half a page down/up
