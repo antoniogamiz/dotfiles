@@ -44,6 +44,12 @@ git remote add origin git@<personal|work>:<owner>/<repository>.git
 
 ## Dependencies
 
+### [Lazy git](https://github.com/jesseduffield/lazygit?tab=readme-ov-file#homebrew)
+
+```bash 
+brew install lazygit
+```
+
 ### Stow
 
 This is the syslink farm to keep all the configuration files linked with the ones in the repository. [Source](https://www.youtube.com/watch?v=y6XCebnB9gs).
