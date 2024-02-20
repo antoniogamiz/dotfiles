@@ -7,10 +7,13 @@ return {
 		config = function()
 			require("telescope").setup({
 				pickers = {
-					find_files = { hidden = true },
+					find_files = {
+						hidden = true,
+						additional_args = { "--iglob", "!.git", "--iglob", "!node_modules" },
+					},
 					live_grep = {
 						additional_args = function(opts)
-							return { "--hidden" }
+							return { "--hidden", "--iglob", "!.git", "--iglob", "!node_modules" }
 						end,
 					},
 				},
