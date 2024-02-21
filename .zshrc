@@ -169,6 +169,7 @@ alias m='git checkout main'
 alias pull='git pull origin $(git branch --show-current) --no-edit'
 alias push='pull; git push origin $(git branch --show-current)'
 alias fpush='git push -f origin $(git branch --show-current)'
+alias gc='git commit -m'
 
 eval "$(zoxide init zsh)"
 
