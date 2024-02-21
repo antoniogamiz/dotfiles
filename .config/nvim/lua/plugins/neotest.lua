@@ -36,6 +36,8 @@ return {
 				{}
 			)
 
+			vim.keymap.set("n", "<leader>do", "<cmd>lua require('neotest').output.open({ enter = true })<cr>", {})
+
 			-- toggle summary
 			vim.keymap.set("n", "<leader>dS", "<cmd>lua require('neotest').summary.toggle()<cr>", {})
 
