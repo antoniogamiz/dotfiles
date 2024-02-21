@@ -6,6 +6,8 @@ vim.cmd("set number")
 vim.cmd("set clipboard=unnamedplus")
 vim.cmd('nnoremap d "_d')
 vim.cmd('vnoremap d "_d')
+-- https://neovim.io/doc/user/options.html#%27scrolloff%27
+vim.cmd("setlocal scrolloff=999")
 vim.g.mapleader = " "
 
 -- move half a page down/up
