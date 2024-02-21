@@ -166,6 +166,9 @@ alias gs='git status'
 alias gl='git log --oneline'
 alias glast='git log -1 HEAD --stat' 
 alias m='git checkout main'
+alias pull='git pull origin $(git branch --show-current) --no-edit'
+alias push='pull; git push origin $(git branch --show-current)'
+alias fpush='git push -f origin $(git branch --show-current)'
 
 eval "$(zoxide init zsh)"
 
