@@ -161,5 +161,11 @@ alias ls=colorls
 alias python=python3
 alias n=nvim
 
+# git 
+alias gs='git status'
+alias gl='git log --oneline'
+alias glast='git log -1 HEAD --stat' 
+alias m='git checkout main'
+
 eval "$(zoxide init zsh)"
 
