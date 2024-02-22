@@ -173,3 +173,4 @@ alias gc='git commit -m'
 
 eval "$(zoxide init zsh)"
 
+export DJANGO_SETTINGS_MODULE=badgermapping.settings_local

@@ -27,7 +27,7 @@ return {
 				"<cmd>lua require('telescope.builtin').buffers({ sort_mru = true, ignore_current_buffer = true })<cr>",
 				{}
 			)
-			vim.keymap.set("n", "<leader>to", "<cmd>lua require('telescope.builtin').oldfiles()<cr>", {})
+			vim.keymap.set("n", "<leader>so", "<cmd>lua require('telescope.builtin').oldfiles()<cr>", {})
 		end,
 	},
 	{

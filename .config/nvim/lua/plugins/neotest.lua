@@ -1,8 +1,10 @@
 return {
 	{
 		"nvim-neotest/neotest",
+		ft = { "python" },
 		dependencies = {
 			"nvim-lua/plenary.nvim",
+			"nvim-neotest/neotest-python",
 			"antoinemadec/FixCursorHold.nvim",
 			"nvim-treesitter/nvim-treesitter",
 		},
@@ -11,11 +13,12 @@ return {
 		"nvim-neotest/neotest-python",
 		dependencies = {
 			"nvim-neotest/neotest",
+			"nvim-treesitter/nvim-treesitter",
 		},
 		config = function()
 			require("neotest").setup({
 				adapters = {
-					require("neotest-python"),
+					require("neotest-python")({ runner = "django" }),
 				},
 			})
 
