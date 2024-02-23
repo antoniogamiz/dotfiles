@@ -12,6 +12,8 @@ return {
 				"mypy",
 				"black",
 				"pyright",
+				"python-lsp-server",
+				"jedi_language_server",
 			},
 		},
 	},
@@ -28,6 +30,21 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
+
+			-- lspconfig.pylsp.setup({
+			--   capabilities = capabilities,
+			--   filetypes = { "python" },
+			-- })
+
+			-- lspconfig.ruff_lsp.setup({
+			-- 	capabilities = capabilities,
+			-- 	filetypes = { "python" },
+			-- })
+
+			lspconfig.jedi_language_server.setup({
+				capabilities = capabilities,
+				filetypes = { "python" },
+			})
 
 			lspconfig.pyright.setup({
 				capabilities = capabilities,
@@ -49,6 +66,7 @@ return {
 			vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 			vim.keymap.set("n", "<leader>gn", vim.diagnostic.goto_next, {})
+			vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {})
 		end,
 	},
 	{
@@ -61,5 +79,13 @@ return {
 			"nvim-treesitter/nvim-treesitter",
 			"nvim-tree/nvim-web-devicons",
 		},
+	},
+	{
+		"ray-x/lsp_signature.nvim",
+		event = "VeryLazy",
+		opts = {},
+		config = function(_, opts)
+			require("lsp_signature").setup(opts)
+		end,
 	},
 }

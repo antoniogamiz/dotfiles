@@ -14,6 +14,7 @@ return {
 		vim.keymap.set("n", "<C-Right>", "<C-w><Right>")
 		require("neo-tree").setup({
 			filesystem = {
+				use_libuv_file_watcher = true,
 				filtered_items = {
 					hide_dotfiles = false,
 					hide_gitignored = false,
