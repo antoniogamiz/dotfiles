@@ -42,6 +42,8 @@ git remote remove origin
 git remote add origin git@<personal|work>:<owner>/<repository>.git
 ```
 
+Also make sure to locally setup the .git/config directory or use aliases to set the correct environment variables each time. [Source](https://stackoverflow.com/a/69509290/8849071)
+
 ## Dependencies
 
 ### [Zoxide (smarter cd)](https://github.com/ajeetdsouza/zoxide)
